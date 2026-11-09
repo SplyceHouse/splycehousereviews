@@ -95,7 +95,7 @@ schema = {
 
 NAV = [("PORTFOLIO","portfolio"),("SERVICES","post-event-edits"),("ABOUT","about"),("ST. LOUIS","event-video-production-in-st-louis"),("BLOG","blog")]
 FOOT = [("PORTFOLIO","portfolio"),("ABOUT","about"),("ST. LOUIS","event-video-production-in-st-louis"),("REMOTE","remote-editing"),("PRICING","https://calculator.splycehouse.com"),("ROSTER","https://roster.splycehouse.com/"),
-        ("CONTACT","#contactform"),("BLOG","blog"),("BRAND","https://styleguide.splycehouse.com/"),("TRAVEL","international-production-travel-guide"),("FILMS","https://www.splycefilms.com/")]
+        ("CONTACT","#contactform"),("BLOG","blog"),("BRAND","https://styleguide.splycehouse.com/"),("TRAVEL","international-production-travel-guide"),("FILMS","https://www.splycefilms.com/"),("REVIEWS",SITE)]
 def href(p): return p if p.startswith("http") else MAIN + p
 SERVICES = [("Pre-Event Support","pre-event-support"),("On-Site Coverage","on-site-coverage"),("Post-Event Edits","post-event-edits"),("Remote Editing","remote-editing")]
 dd = "".join(f'<a href="{href(p)}">{t}</a>' for t, p in SERVICES)
