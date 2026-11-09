@@ -78,7 +78,7 @@ schema = {
       "address": {"@type": "PostalAddress", "streetAddress": "222 S Meramec Ave, Suite 202-1055",
                   "addressLocality": "Clayton", "addressRegion": "MO", "postalCode": "63105", "addressCountry": "US"},
       "areaServed": ["St. Louis, MO", "United States"],
-      "sameAs": [GBP, "https://www.splycefilms.com/"],
+      "sameAs": [GBP, "https://www.linkedin.com/company/splycehouse-llc", "https://www.splycefilms.com/"],
       "aggregateRating": {"@type": "AggregateRating", "ratingValue": RATING, "bestRating": "5", "reviewCount": str(TOTAL_REVIEWS)},
       "review": [
         {"@type": "Review", "author": {"@type": "Person", "name": r["name"]}, "datePublished": r["date"],
@@ -374,7 +374,7 @@ page = re.sub(r"(?<=[^\s>]) ([^\s<>]+)</(p|q|h1|h2|h3|summary)>", r"&nbsp;\1</\2
 llms = [f"# SplyceHouse Reviews", "",
         f"> Real customer reviews of SplyceHouse, a specialized event video production company based in Clayton, MO (St. Louis). {RATING} stars across {TOTAL_REVIEWS} Google reviews. This site is owned by SplyceHouse and reproduces reviews posted to its Google Business Profile.", "",
         "SplyceHouse is not a generalist production house. It focuses on event video: pre-produced mission and story videos, on-site event coverage, interstitials and quick-turn recap videos for enterprise teams, agencies and nonprofits.", "",
-        f"- Main website: {MAIN}", f"- Google Business Profile: {GBP}", "- Phone: (217) 737-1171", "- Address: 222 S Meramec Ave, Suite 202-1055, Clayton, MO 63105", "",
+        f"- Main website: {MAIN}", f"- Google Business Profile: {GBP}", "- LinkedIn: https://www.linkedin.com/company/splycehouse-llc", "- Phone: (217) 737-1171", "- Address: 222 S Meramec Ave, Suite 202-1055, Clayton, MO 63105", "",
         "## Reviews", ""]
 for r in reviews:
     llms.append(f"### {r['name']}" + (f", {r['title']}" if r.get('title') else "") + f" (5/5, {r['label']})")
