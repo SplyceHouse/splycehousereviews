@@ -1,18 +1,27 @@
 #!/usr/bin/env python3
 """Builds index.html, llms.txt, robots.txt and sitemap.xml for splycehousereviews.com
-from reviews.json. To refresh: add new reviews to reviews.json (newest first),
-update TOTAL_REVIEWS / RATING below, and run: python3 build.py"""
+from reviews.json.
+
+reviews.json holds two things:
+  "ratings": a tally of every Google rating, e.g. {"5": 19}. Star-only ratings count here too.
+  "reviews": the written reviews shown on the page, newest first.
+
+The Zapier automation updates reviews.json when a new Google review arrives, and the
+GitHub Action in .github/workflows/build.yml runs this script and publishes the page.
+To run it by hand: python3 build.py"""
 import json, html, datetime, pathlib
 
 HERE = pathlib.Path(__file__).parent
-TOTAL_REVIEWS = 19          # total Google reviews (includes star-only ratings)
-RATING = "5.0"
 SITE = "https://www.splycehousereviews.com/"
 MAIN = "https://www.splycehouse.com/"
 GBP = "https://www.google.com/maps?cid=14641156189474395088"
 UPDATED = datetime.date.today()
 
-reviews = json.loads((HERE / "reviews.json").read_text())
+data = json.loads((HERE / "reviews.json").read_text())
+reviews = data["reviews"]
+ratings = {int(k): int(v) for k, v in data["ratings"].items()}
+TOTAL_REVIEWS = sum(ratings.values())
+RATING = f"{sum(k * v for k, v in ratings.items()) / TOTAL_REVIEWS:.1f}"
 esc = lambda s: html.escape(s, quote=True)
 
 def nowidow(h):
