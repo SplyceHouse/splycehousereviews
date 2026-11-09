@@ -128,7 +128,9 @@ page = f"""<!doctype html>
 <meta property="og:title" content="SplyceHouse Reviews">
 <meta property="og:description" content="{RATING} stars across {TOTAL_REVIEWS} Google reviews. See what clients say about working with SplyceHouse.">
 <meta property="og:url" content="{SITE}">
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
