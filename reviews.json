@@ -1,8 +1,15 @@
 {
  "ratings": {
-  "5": 19
+  "5": 20
  },
  "reviews": [
+  {
+   "name": "joe H.",
+   "date": "2026-11",
+   "label": "November 2026",
+   "text": "SplyceHouse did an excellent job for us at Excel Landscaping They took the time to understand our business and what we wanted out of the video, and they kept everything organized from planning to the final cut. The crew was professional and easy to work with, and they needed very little direction from us. The finished video looks sharp and shows off our work well. They communicated clearly the whole way and delivered what they promised. If you’re a St. Louis business that needs quality video work, I’d recommend SplyceHouse without hesitation.",
+   "title": ""
+  },
   {
    "name": "Kevin Smith",
    "date": "2026-09",
@@ -115,5 +122,8 @@
    "text": "I highly recommend SPLYCEHOUSE for video production. I'm partnering with them on multiple projects this year and extremely happy with their work. The team continues to provide exceptional customer service and expertise. Beyond grateful to work with them.",
    "title": ""
   }
+ ],
+ "seen": [
+  "accounts/116269255647262031441/locations/8545151435371536712/reviews/AbFvOqkr8rRatEk4hm-wk3HkNFPY6uIGMSqV2Qkt1mLC8RVG2srJ8JJwwwJeBkxvS8KNmPtcRB9B1Q"
  ]
 }
